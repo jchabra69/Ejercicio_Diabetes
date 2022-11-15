@@ -1,0 +1,34 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,127,73)
+  Background = Color.Foreground
+  { Binconsciente Button
+    MoveScaled(45,57,16,4)
+    Enabled = False
+    Background = Color.ButtonBackground
+    Text = ("Consciente")
+  }
+  { Bconsciente Button
+    MoveScaled(65,57,16,4)
+    Enabled = False
+    Background = Color.ButtonBackground
+    Text = ("Inconsciente")
+  }
+  { TValor TextBox
+    MoveScaled(45,37,35,8)
+  }
+  { LResultado Label
+    MoveScaled(9,4,112,21)
+    Background = Color.TooltipBackground
+  }
+  { BIngresar Button
+    MoveScaled(54,48,16,4)
+    Background = Color.SoftRed
+    Text = ("Ingresar")
+  }
+  { Timer1 #Timer
+    #MoveScaled(104,55)
+    Delay = 5
+  }
+}

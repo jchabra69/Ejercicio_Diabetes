@@ -1,0 +1,39 @@
+' Gambas class file
+
+
+
+
+Public Sub BIngresar_Click()
+
+  Dim glucemia As Integer
+  
+  glucemia = TValor.Text
+  
+  If glucemia <= 70 Then 
+    
+    LResultado.Text = "Tienes menos de 70 mg/dl de glucemia en sangre, esto se considera hipoglucemia. Indica si está consciente o incosciente."
+    
+    Bconsciente.Enabled = True
+    Binconsciente.Enabled = True
+    
+    Else If glucemia >= 180 Then 
+      
+      LResultado.Text = "Tienes más de 180 mg/dl de glucemia en sangre, esto se considera hiperglucemia."
+      Wait 3
+      LResultado.Text = "Debe administrar agua y avisar a su familia."
+    
+  Endif
+
+End
+
+Public Sub Binconsciente_Click()
+
+  LResultado.Text = "Dar líquidos azucarados de absorción rápida y después repetir la prueba de glucemia en 5-10 min. POr último dar hidratos de carbono de absorción lenta"
+
+End
+
+Public Sub Bconsciente_Click()
+
+  LResultado.Text = "!NO DAR NADA POR BOCA, ADMINISTRAR GLUCAGÓN¡ Avisar a familias y emergencias..."
+
+End
